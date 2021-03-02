@@ -83,6 +83,7 @@ r7: vmarketshare = sum{i in M,j in N,k in O}vEsc[i,j,k];
 r8: vcusto = sum{i in M,j in N,k in O}(vEsc[i,j,k] * cl[i,j]* multCusLog[i,j]) +sum{i in M}(vFabr[i]*cf[i]) +sum{i in M,j in N,k in O}(vEsc[i,j,k] * cv[i,k]);
 r9: vlucro = sum{i in M,j in N,k in O}(vEsc[i,j,k] * pr[j,k] )- sum{i in M,j in N,k in O}(vEsc[i,j,k] * cl[i,j]* multCusLog[i,j]) - sum{i in M}(vFabr[i]*cf[i]) - sum{i in M,j in N,k in O}(vEsc[i,j,k] * cv[i,k]);
 
+
 #option solver cplex; 
 
 solve;
