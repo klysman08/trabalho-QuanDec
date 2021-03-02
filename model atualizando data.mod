@@ -1,14 +1,4 @@
-# O Problema do Transporte modelo 2
-#
-#
-#
-#
-#
-#   Igor Freitas - 2016086240
-#   Pedro Callegari Portugal - 2016092402
-#   Pedro Novato Silva de Faria - 2016070042
-#   Selena Souza Afgouni - 2016119378
-
+# O Problema do Transporte 
 
 
 # FABRICAS
@@ -122,16 +112,16 @@ set O := VEST CAL ACES;
 # CAPACIDADE PRODUÇÃO POR HORA
 param ch :
         VEST    CAL    ACES :=
-    ARG	400	340	250
-    BRA	630	535	320
+    ARG	0	340	250
+    BRA	630	535	0
     EUA	1000	780	1500
-    MEX	580	415	150
-    ITA	590	460	350
+    MEX	0	415	0
+    ITA	590	460	0
     POL	410	400	200
-    IND	895	600	700
-    CHI	1320	850	1000
-    COR	100	350	290
-    IDO	815	630	510
+    IND	0	600	700
+    CHI	1320	850	0
+    COR	100	0	290
+    IDO	0	630	510
     VIE	760	680	520;
 
 
@@ -139,7 +129,7 @@ param ch :
     
     
     
-# DISPONIBILIDADE DE DIAS NO TRIMESTRE
+# DISPONIBILIDADE DE DIAS 
 param dd :=
     ARG	62
     BRA	68
@@ -158,7 +148,7 @@ param dd :=
  #DEMANDA MINIMA A SER ATENDIDA
  param dmin :
         VEST    CAL     ACES :=
-    NAM    	693	781	252
+    NAM 	693	781	252
     SAM	231	473	72
     CAM	73	33	7
     EUR	451	506	126
@@ -167,6 +157,20 @@ param dd :=
     OCE	68	60	24
     NAS	572	643	144
     SAS	225	346	72;
+    
+
+ #DEMANDA MAXIMA POSSIVEL
+ param dmax :
+        VEST    CAL    ACES :=
+    NAM	970	1073	323
+    SAM	367	557	77
+    CAM	88	38	8
+    EUR	632	695	161
+    ORM	170	116	23
+    AFR	88	64	11
+    OCE	81	71	26
+    NAS	801	884	198
+    SAS	316	476	92; 
     
     
  #MULT DEMANDA MAX
@@ -196,21 +200,6 @@ param dd :=
     IDO   1     1     1     1      1     1     1     1     1
     VIE   1     1     1     1      1     1     1     1     1;
     
-    
-    
-
- #DEMANDA MAXIMA POSSIVEL
- param dmax :
-        VEST    CAL    ACES :=
-    NAM	970	1073	323
-    SAM	367	557	77
-    CAM	88	38	8
-    EUR	632	695	161
-    ORM	170	116	23
-    AFR	88	64	11
-    OCE	81	71	26
-    NAS	801	884	198
-    SAS	316	476	92; 
     
  #PREÇO POR REGIAO
  param pr : 

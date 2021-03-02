@@ -16,7 +16,6 @@ set O;
 
 param multCusLog{i in M,j in N};
 
-
 #mult demanda max
 param multd{j in N};
 
@@ -62,9 +61,7 @@ var vlucro;
 
 # Funcao Objetivo-----------------------------------------------------------------
 maximize lucro : sum{i in M,j in N,k in O}(vEsc[i,j,k] * pr[j,k] )- sum{i in M,j in N,k in O}(vEsc[i,j,k] * cl[i,j]* multCusLog[i,j]) - sum{i in M}(vFabr[i]*cf[i]) - sum{i in M,j in N,k in O}(vEsc[i,j,k] * cv[i,k]); 
-#maximize marketshare: sum{i in M,j in N,k in O}vEsc[i,j,k];
-#maximize receita: sum{i in M,j in N,k in O}(vEsc[i,j,k] * pr[j,k] );
-#minimize custo: sum{i in M,j in N,k in O}(vEsc[i,j,k] * cl[i,j]* multCusLog[i,j]) +sum{i in M}(vFabr[i]*cf[i]) +sum{i in M,j in N,k in O}(vEsc[i,j,k] * cv[i,k]);
+
 #Restricoes-----------------------------------------------------------------------
 
 #res binaria
@@ -113,17 +110,17 @@ set O := VEST CAL ACES;
 # CAPACIDADE PRODUÇÃO POR HORA
 param ch :
         VEST    CAL    ACES :=
-    ARG 400     340    0
-    BRA 630     535    0
-    EUA 1000    780    1500
-    MEX 580     0      0
-    ITA 590     460    350
-    POL 410     400    0
-    IND 895     0      0
-    CHI 0       850    0
-    COR 0       350    290
-    IDO 0       630    510
-    VIE 760     0      520;
+    ARG	400	340	0
+    BRA	630	535	0
+    EUA	1000	780	1500
+    MEX	580	0	0
+    ITA	590	460	350
+    POL	410	400	0
+    IND	895	0	0
+    CHI	0	850	0
+    COR	0	350	290
+    IDO	0	630	510
+    VIE	760	0	520;
     
     
     
