@@ -1,14 +1,5 @@
-# O Problema do Transporte modelo 2
-#
-#
-#
-#
-#
-#   Igor Freitas - 2016086240
-#   Pedro Callegari Portugal - 2016092402
-#   Pedro Novato Silva de Faria - 2016070042
-#   Selena Souza Afgouni - 2016119378
-
+# O Problema do Transporte Trabalho de modelagem 2020/2
+# 01/03/2021
 
 
 # FABRICAS
