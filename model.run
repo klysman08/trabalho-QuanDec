@@ -1,6 +1,0 @@
-option solver cplex; 
-
-solve;
-
-display vEsc;
-display vFabr;
